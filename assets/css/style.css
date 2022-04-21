@@ -26,7 +26,20 @@ img {
     display: flex;
 }
 
-.slider > img {
+.card {
+    position: relative;
+}
+
+.details {
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+    padding: 1rem;
+    text-align: end;
+    color: white;
+}
+
+.card > img {
     width: 1000px;
     height: 400px;
     object-fit: cover;
@@ -36,9 +49,27 @@ img {
     height: 400px;
     display: flex;
     flex-direction: column;
+    position: relative;
+
 }
 
 .thumb {
     height: calc(100% / 5)
+}
+
+.navigator{
+    display: flex;
+    flex-direction: column;
+    gap: 355px;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(231, 229, 229, 0.868);
+    border-radius: 100%;
+ 
 }
 
