@@ -22,9 +22,9 @@
                     </div>
                 </div>
                 <div class="thumbnails">
-                    <img class="thumb" :src="thumb.image" alt="" v-for="(thumb, index) in nations" :class="activeImage === index ? 'active' : ''">
+                    <img @click="activeImage = index" class="thumb" :src="thumb.image" alt="" v-for="(thumb, index) in nations" :class="activeImage === index ? 'active' : ''">
                     <div class="navigator">
-                        <div @click="prevImage" class="prev"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div @click="" class="prev"><i class="fa-solid fa-chevron-up"></i></div>
                         <div @click="nextImage" class="next"><i class="fa-solid fa-chevron-down"></i></div>
                     </div>
                 </div>
