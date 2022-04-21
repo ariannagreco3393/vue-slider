@@ -8,7 +8,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div class="container">
+            <div class="slider nations">
+                <img :src="slider.nations[0].image" alt="">
+                <div class="thumbnails">
+                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[0]">
+                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[1]">
+                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[2]">
+                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[3]">
+                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[4]">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>

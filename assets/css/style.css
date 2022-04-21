@@ -7,3 +7,38 @@
 body {
     background-color: aliceblue;
 }
+
+img {
+    max-width: 100%;
+}
+
+
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider > img {
+    width: 1000px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.thumbnails {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumb {
+    height: calc(100% / 5)
+}
+
