@@ -12,20 +12,21 @@
 
 <body>
     <div id="app">
+        <h1>Choose your travel</h1>
         <div class="container">
             <div class="slider nations">
                 <div class="card">
-                    <img :src="nations[0].image" alt="">
+                    <img :src="nations[activeImage].image" alt="">
                     <div class="details">
-                        <h3>{{nations[0].title}}</h3>
-                        <p>{{nations[0].text}}</p>
+                        <h3>{{nations[activeTitle].title}}</h3>
+                        <p>{{nations[activeText].text}}</p>
                     </div>
                 </div>
                 <div class="thumbnails">
-                    <img class="thumb" :src="thumb.image" alt="" v-for="(thumb, index) in nations">
+                    <img class="thumb" :src="thumb.image" alt="" v-for="(thumb, index) in nations" :class="activeImage === index ? 'active' : ''">
                     <div class="navigator">
-                        <div class="prev"><i class="fa-solid fa-chevron-up"></i></div>
-                        <div class="next"><i class="fa-solid fa-chevron-down"></i></div>
+                        <div @click="prevImage" class="prev"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div @click="nextImage" class="next"><i class="fa-solid fa-chevron-down"></i></div>
                     </div>
                 </div>
                 

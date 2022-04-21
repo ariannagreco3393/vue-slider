@@ -12,6 +12,13 @@ img {
     max-width: 100%;
 }
 
+h1 {
+    text-align: center;
+    color:rgb(79, 228, 25);
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 .container {
     max-width: 1200px;
@@ -33,7 +40,7 @@ img {
 .details {
     position: absolute;
     bottom: 10px;
-    left: 100px;
+    right: 0;
     padding: 1rem;
     text-align: end;
     color: white;
@@ -54,7 +61,8 @@ img {
 }
 
 .thumb {
-    height: calc(100% / 5)
+    height: calc(100% / 5);
+    filter: brightness(0.5);
 }
 
 .navigator{
@@ -70,6 +78,11 @@ img {
 .prev, .next {
     background-color: rgba(231, 229, 229, 0.868);
     border-radius: 100%;
- 
+    cursor: pointer;
+}
+
+.active {
+    filter: none;
+    border: 3px solid rgb(79, 228, 25);
 }
 

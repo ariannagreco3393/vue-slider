@@ -27,6 +27,8 @@ const app = new Vue({
     el: '#app',
     data: {
         activeImage: 0,
+        activeTitle: 0,
+        activeText: 0,
         nations: [
             {
                 image: './assets/img/01.jpg',
@@ -57,6 +59,29 @@ const app = new Vue({
 
     },
     methods: {
+        prevImage(){
+            //console.log('hai premuto prev');
+            if (this.activeImage === 0) {
+                this.activeImage = this.nations.image.length
+            } 
+            this.activeImage--
+            this.activeTitle--
+            this.activeText--
+        },
+
+        nextImage(){
+            //console.log('hai premuto next');
+            this.activeImage++
+            this.activeTitle++
+            this.activeText++
+            
+
+            if (this.activeImage === this.nations.image.length) {
+                this.activeImage = 0
+            }
+
+        },
+
 
     }
 })
