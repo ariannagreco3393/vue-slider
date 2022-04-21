@@ -15,18 +15,14 @@
         <div class="container">
             <div class="slider nations">
                 <div class="card">
-                    <img :src="slider.nations[0].image" alt="">
+                    <img :src="nations[0].image" alt="">
                     <div class="details">
-                        <h3>{{slider.nations[0].title}}</h3>
-                        <p>{{slider.nations[0].text}}</p>
+                        <h3>{{nations[0].title}}</h3>
+                        <p>{{nations[0].text}}</p>
                     </div>
                 </div>
                 <div class="thumbnails">
-                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[0]">
-                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[1]">
-                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[2]">
-                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[3]">
-                    <img class="thumb" :src="thumb" alt="" v-for="thumb in slider.nations[4]">
+                    <img class="thumb" :src="thumb.image" alt="" v-for="(thumb, index) in nations">
                     <div class="navigator">
                         <div class="prev"><i class="fa-solid fa-chevron-up"></i></div>
                         <div class="next"><i class="fa-solid fa-chevron-down"></i></div>
