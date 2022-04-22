@@ -13,7 +13,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="slider nations" @mouseover="pauseSlider" @mouseout="startSlider">
+            <div class="slider nations" @mouseenter="pauseSlider" @mouseleave="startSlider">
                 <div class="card">
                     <img :src="nations[activeImage].image" alt="">
                     <div class="details">
@@ -27,8 +27,7 @@
                         <div @click="prevImage" class="prev"><i class="fa-solid fa-chevron-up"></i></div>
                         <div @click="nextImage" class="next"><i class="fa-solid fa-chevron-down"></i></div>
                     </div>
-                </div>
-                
+                </div> 
             </div>
         </div>
     </div>
