@@ -26,6 +26,7 @@ Bonus:
 const app = new Vue({
     el: '#app',
     data: {
+        sliderTimerId: null,
         activeImage: 0,
         activeTitle: 0,
         activeText: 0,
@@ -59,29 +60,43 @@ const app = new Vue({
 
     },
     methods: {
-        prevImage(){
+        prevImage() {
             //console.log('hai premuto prev');
             if (this.activeImage === 0) {
                 this.activeImage = this.nations.image.length
-            } 
+            }
             this.activeImage--
             this.activeTitle--
             this.activeText--
         },
 
-        nextImage(){
+        nextImage() {
             //console.log('hai premuto next');
             this.activeImage++
             this.activeTitle++
             this.activeText++
-            
+
 
             if (this.activeImage === this.nations.image.length) {
                 this.activeImage = 0
             }
 
         },
+        //timer per pausa e ripartenza
+        pauseSlider() {
+            console.log('pause');
+            clearInterval(this.sliderTimerId)
+        },
 
+        startSlider() {
+            console.log('start');
+            this.sliderTimerId = setInterval(this.nextImage, 3000)
+        }
 
+    },
+    // fa vedere un'immagine ogni 3 secondi
+    mounted() {
+        console.log('mounted');
+        this.startSlider()
     }
 })
